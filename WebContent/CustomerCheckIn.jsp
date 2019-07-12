@@ -11,6 +11,11 @@
 			<h1 style="text-align: center">Customer Check In</h1>
 		</div>
 		<div>
+			<a href="Index.jsp">Index Page</a>
+		</div>
+		
+		
+		<div>
 			<p>Yo baby, what you want to do!!! You can Open a checking account!!! You can Open a savings account!!!</p>
 			<p>But first, we need to see if you're a customer. Type in your first and last name below.</p>
 		</div>

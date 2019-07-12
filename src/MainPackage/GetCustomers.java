@@ -11,23 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.mysql.jdbc.Driver;
 
-/**
- * Servlet implementation class FirstServlet
- */
 @WebServlet("/GetCustomers")
 public class GetCustomers extends HttpServlet {
-//	private static final long serialVersionUID = 1L;
 	
 	final String DB_URL="jdbc:mysql://localhost/bankAccountApp?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-//	final String DB_URL="jdbc:mysql://localhost:3306/test?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	
 	final String USER = "root";
 	final String PASS = "pass";
 	final String JDBC_DRIVER = "com.mysql.jdbc.Driver"; 
-	
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+
     public GetCustomers() {
         super();
     }
@@ -36,13 +28,8 @@ public class GetCustomers extends HttpServlet {
 		doPost(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-//		out.println("FirstServlet Reached.");
-		
+		PrintWriter out = response.getWriter();		
 		try {
 	         Class.forName("com.mysql.cj.jdbc.Driver");
 

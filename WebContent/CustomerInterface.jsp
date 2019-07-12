@@ -18,16 +18,31 @@
 		<p>Hello 
 			<c:out value="${firstName}" default="firstName"/> 
 			<c:out value="${lastName}" default="lastName"/>
-		</p>	
-		<p>Here you can view and perform transactions for your accounts.</p>
-		<%-- <c:out value="${firstName}" default="firstName"/>
-		<c:out value="${lastName}" default="lastName"/> --%>
+		</p>
+	</div>
+	
+	<div>
+		<a href="Index.jsp">Index Page</a>
 	</div>
 	
 	<div>
 		<hr>
-		<h3>Accounts</h3>
-		<p>Hyperlinks of current accounts here.</p>
+		
+		<table border="1">
+            <caption><h2>Transactions</h2></caption>
+            <tr>
+                <th>Transaction Number</th>
+                <th>Account Number</th>
+                <th>Amount</th>
+            </tr>
+            <c:forEach var="transaction" items="${listTransaction}">
+                <tr>
+                    <td><c:out value="${transaction.transactionNumber}" /></td>
+                    <td><c:out value="${transaction.accountNumber}" /></td>
+                    <td><c:out value="${transaction.amount}" /></td>
+                </tr>
+            </c:forEach>
+        </table>
 		<hr>
 	</div>
 	
@@ -38,23 +53,8 @@
 			<button name="submit" >Submit</button>
 		</form>
 		
-		<form action="" method="post">
-			<h3 style= "">See Saving Account</h3>
-			<button name="submit" >Submit</button>
-		</form>
-
 		<!-- <form action="" method="post">
-			<h3 style= "">Create Checking Account</h3>
-			Account Number: <input name="accountNumber"><br>
-			Account Name: <input name="accountName"><br>
-			<button name="submit" >Submit</button>
-		</form>
-	
-	
-		<form action="" method="post">
-			<h3 style= "">Create Savingsing Account</h3>
-			Account Number: <input name="accountNumber"><br>
-			Account Name: <input name="accountName"><br>
+			<h3 style= "">See Saving Account</h3>
 			<button name="submit" >Submit</button>
 		</form> -->
 		

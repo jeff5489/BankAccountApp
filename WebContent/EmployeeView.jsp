@@ -13,6 +13,9 @@
 			<h1 style="text-align: center">Employee Interface</h1>
 		</div>
 		<div>
+			<a href="Index.jsp">Index Page</a>
+		</div>
+		<div>
 			<form action="AddCustomer" method="post">
 				<h3 style= "">Add Customer</h3>
 				Customer ID Number: <input name="customerID"><br>

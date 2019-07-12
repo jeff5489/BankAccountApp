@@ -4,28 +4,38 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public abstract class Transaction {
+public class Transaction {
+	private int transactionNumber;
+	private int accountNumber;
 	private double amount;
-	private Date date;
-	private String destination; // enums???
+//	private Date date;
+//	private String destination; // enums???
 	
-	public Transaction(double amount, String date, String destination) {
+	public Transaction(int transactionNumber, int accountNumber, double amount) {
 		super();
+		this.transactionNumber = transactionNumber;
+		this.accountNumber = accountNumber;
 		this.amount = amount;
-		Date date1 = new Date();
-		this.date = date1;
-		this.destination = destination;
 	}
 	
-	
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+
 	public double getAmount() {
 		return amount;
 	}
-	public Date getDate() {
-		return date;
+
+	public int getTransactionNumber() {
+		return transactionNumber;
 	}
-	public String getDestination() {
-		return destination;
-	}
+
+	
+//	public Date getDate() {
+//		return date;
+//	}
+//	public String getDestination() {
+//		return destination; 
+//	}
 	
 }
